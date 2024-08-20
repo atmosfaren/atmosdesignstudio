@@ -597,7 +597,7 @@ document.addEventListener('DOMContentLoaded', function () {
     handleScroll();
 });
 
-// Funktion för kontaktformulär hiring
+// Function for handling the hiring forms
 function initHiringForms() {
     const hiringForms = document.querySelectorAll('.hiring-form');
     hiringForms.forEach(form => {
@@ -610,7 +610,7 @@ function initHiringForms() {
                 message: form.querySelector('textarea[name="message"]').value
             };
 
-            emailjs.send('YOUR_SERVICE_ID', 'atmosdesignstudio', formData)
+            emailjs.send('A-CuGtiiFvvuNPmEc', 'your_actual_template_id', formData)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     alert('Application submitted successfully!');
@@ -623,7 +623,7 @@ function initHiringForms() {
     });
 }
 
-// Funktion för kontaktformulär contact
+// Function for handling the contact form
 function initContactForm() {
     const contactForm = document.getElementById('contactForm');
     contactForm.addEventListener('submit', function (event) {
@@ -635,7 +635,7 @@ function initContactForm() {
             message: contactForm.querySelector('textarea[name="message"]').value
         };
 
-        emailjs.send('YOUR_SERVICE_ID', 'atmosdesignstudio', formData)
+        emailjs.send('A-CuGtiiFvvuNPmEc', 'your_actual_template_id', formData)
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 alert('Message sent successfully!');
