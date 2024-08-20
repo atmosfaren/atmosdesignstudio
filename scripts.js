@@ -596,7 +596,6 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', handleScroll);
     handleScroll();
 });
-
 // Function for handling the hiring forms
 function initHiringForms() {
     const hiringForms = document.querySelectorAll('.hiring-form');
@@ -613,12 +612,13 @@ function initHiringForms() {
                 howDidYouFindUs: form.querySelector('select[name="how-did-you-find-us"]').value
             };
 
-            emailjs.send('A-CuGtiiFvvuNPmEc', 'atmosdesignstudio', formData)
+            emailjs.send('service_yourServiceId', 'atmosdesignstudio', formData)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     alert('Application submitted successfully!');
                     form.reset();
-                }, function(error) {
+                })
+                .catch(function(error) {
                     console.error('FAILED...', error);
                     alert('Error submitting application. Please try again later.');
                 });
@@ -641,20 +641,20 @@ function initContactForm() {
             message: contactForm.querySelector('textarea[name="message"]').value
         };
 
-        emailjs.send('A-CuGtiiFvvuNPmEc', 'atmosdesignstudio', formData)
+        emailjs.send('service_yourServiceId', 'atmosdesignstudio', formData)
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 alert('Message sent successfully!');
                 contactForm.reset();
                 document.getElementById('contactPopup').style.display = 'none';
                 document.getElementById('main-content').classList.remove('blur');
-            }, function(error) {
+            })
+            .catch(function(error) {
                 console.error('FAILED...', error);
                 alert('Error sending message. Please try again later.');
             });
     });
 }
-
 
 
 // Funktion för profil scroll bilder TOOLS
