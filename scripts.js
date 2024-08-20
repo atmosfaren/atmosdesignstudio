@@ -1,4 +1,3 @@
-<script>
 document.addEventListener('DOMContentLoaded', function () {
     console.log("Document loaded. Initializing functions...");
 
@@ -21,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initHiringForms();  // For the two hiring forms
     initTermsCheckbox();
     initNewProjectPopup();
+    initProfileScrollImages(); // För profil scroll bilder
 
     // Funktion för att hantera att användaren måste läsa villkoren innan de kan bocka av rutan
     function initTermsCheckbox() {
@@ -641,36 +641,40 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
         });
     }
-});
-// Funktion för profil scroll bilder TOOLS
-document.addEventListener('DOMContentLoaded', function () {
-    const scrollContainer = document.querySelector('#tools-scroll .scroll-content');
-    const scrollWrapper = document.querySelector('#tools-scroll');
-    let scrollSpeed = 0.5; // Standard scrollhastighet
-    let slowSpeed = 0.1; // Hastighet vid hover
-    let isHovering = false;
 
-    function startScrolling() {
-        scrollContainer.style.transition = 'none'; // Ta bort tidigare transition
-        let scrollLeft = scrollWrapper.scrollLeft;
-        scrollLeft += isHovering ? slowSpeed : scrollSpeed;
-        if (scrollLeft >= scrollContainer.scrollWidth / 2) {
-            scrollWrapper.scrollLeft = 0; // Återställ scroll-positionen för en loopande effekt
-        } else {
-            scrollWrapper.scrollLeft = scrollLeft;
+// Funktion för profil scroll bilder TOOLS
+    function initProfileScrollImages() {
+        const scrollContainer = document.querySelector('#tools-scroll .scroll-content');
+        const scrollWrapper = document.querySelector('#tools-scroll');
+        let scrollSpeed = 0.5; // Standard scrollhastighet
+        let slowSpeed = 0.1; // Hastighet vid hover
+        let isHovering = false;
+
+        function startScrolling() {
+            scrollContainer.style.transition = 'none'; // Ta bort tidigare transition
+            let scrollLeft = scrollWrapper.scrollLeft;
+            scrollLeft += isHovering ? slowSpeed : scrollSpeed;
+            if (scrollLeft >= scrollContainer.scrollWidth / 2) {
+                scrollWrapper.scrollLeft = 0; // Återställ scroll-positionen för en loopande effekt
+            } else {
+                scrollWrapper.scrollLeft = scrollLeft;
+            }
+            requestAnimationFrame(startScrolling);
         }
-        requestAnimationFrame(startScrolling);
+
+        scrollContainer.addEventListener('mouseover', function () {
+            isHovering = true;
+        });
+
+        scrollContainer.addEventListener('mouseout', function () {
+            isHovering = false;
+        });
+
+        startScrolling();
     }
 
-    scrollContainer.addEventListener('mouseover', function () {
-        isHovering = true;
-    });
-
-    scrollContainer.addEventListener('mouseout', function () {
-        isHovering = false;
-    });
-
-    startScrolling();
+    // Funktionen initTermsCheckbox, initNavbar, initBurgerMenu, etc.
+    // Dessa funktioner fortsätter här, så som de var i din tidigare kod.
 });
 
 // Funktion för profil scroll bilder
