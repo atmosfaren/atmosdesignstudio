@@ -78,17 +78,21 @@ function initContactPopup() {
     const closeContactBtn = contactPopup.querySelector('.close');
     const mainContent = document.getElementById('main-content');
 
-    closeContactBtn.addEventListener('click', function() {
-        contactPopup.style.display = 'none';
-        mainContent.classList.remove('blur');
-    });
-
-    window.addEventListener('click', function(event) {
-        if (event.target === contactPopup) {
+    if (mainContent) {
+        closeContactBtn.addEventListener('click', function() {
             contactPopup.style.display = 'none';
             mainContent.classList.remove('blur');
-        }
-    });
+        });
+
+        window.addEventListener('click', function(event) {
+            if (event.target === contactPopup) {
+                contactPopup.style.display = 'none';
+                mainContent.classList.remove('blur');
+            }
+        });
+    } else {
+        console.error('main-content element not found');
+    }
 }
 
 // Funktion för "About Us"-popup
@@ -344,6 +348,7 @@ function initCustomScroll() {
     let scrollSpeed = 0;
     let isScrolling = false;
     let lastScrollTime = Date.now();
+    let scrollInertia;  // Lägg till denna variabel
 
     function customScroll(event) {
         const deltaY = event.deltaY;
@@ -353,14 +358,14 @@ function initCustomScroll() {
         lastScrollTime = currentTime;
         isScrolling = true;
 
-        cancelAnimationFrame(scrollInertia);
+        cancelAnimationFrame(scrollInertia);  // Avbryt tidigare animation
 
         window.scrollBy({
             top: deltaY,
             behavior: 'smooth'
         });
 
-        requestAnimationFrame(smoothScroll);
+        scrollInertia = requestAnimationFrame(smoothScroll);  // Tilldela animationen till scrollInertia
         event.preventDefault();
     }
 
@@ -381,7 +386,7 @@ function initCustomScroll() {
                 behavior: 'smooth'
             });
 
-            requestAnimationFrame(smoothScroll);
+            scrollInertia = requestAnimationFrame(smoothScroll);  // Fortsätt animationen
         }
     }
 
@@ -395,6 +400,7 @@ function initCustomScroll() {
         isScrolling = false;
     });
 }
+
 
 // Funktion för bildspel
 document.addEventListener('DOMContentLoaded', function() {
@@ -599,7 +605,10 @@ function initContactForm() {
             alert('Message sent successfully!');
             contactForm.reset();
             document.getElementById('contactPopup').style.display = 'none';
-            document.getElementById('main-content').classList.remove('blur');
+            const mainContent = document.getElementById('main-content');
+            if (mainContent) {
+                mainContent.classList.remove('blur');
+            }
         }, function(error) {
             console.error('Failed to send message:', error);
             alert('Failed to send message. Please try again later.');
