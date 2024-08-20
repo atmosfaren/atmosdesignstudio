@@ -1,8 +1,6 @@
+<script>
 document.addEventListener('DOMContentLoaded', function () {
     console.log("Document loaded. Initializing functions...");
-
-    // Initialize EmailJS
-    emailjs.init('A-CuGtiiFvvuNPmEc'); // Din public API key
 
     // Initialize functions
     initNavbar();
@@ -643,7 +641,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
         });
     }
-
+});
 // Funktion för profil scroll bilder TOOLS
 document.addEventListener('DOMContentLoaded', function () {
     const scrollContainer = document.querySelector('#tools-scroll .scroll-content');
