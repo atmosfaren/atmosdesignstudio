@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     console.log("Document loaded. Initializing functions...");
 
+    // Initialize EmailJS
+    emailjs.init('A-CuGtiiFvvuNPmEc'); // Din public API key
+
     // Initialize functions
     initNavbar();
     initBurgerMenu();
@@ -613,6 +616,8 @@ function initHiringForms() {
                 howDidYouFindUs: form.querySelector('select[name="how-did-you-find-us"]').value
             };
 
+            console.log('Sending form data:', formData);
+
             emailjs.send('service_dbbqzuc', 'template_uzw80s6', formData)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
@@ -641,6 +646,8 @@ function initContactForm() {
             reason: contactForm.querySelector('select[name="reason"]').value,
             message: contactForm.querySelector('textarea[name="message"]').value
         };
+
+        console.log('Sending contact form data:', formData);
 
         emailjs.send('service_dbbqzuc', 'template_uzw80s6', formData)
             .then(function(response) {
