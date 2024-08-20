@@ -75,10 +75,10 @@ function initCookieConsent() {
 // Funktion för kontakt-popup
 function initContactPopup() {
     const contactPopup = document.getElementById('contactPopup');
-    const closeContactBtn = contactPopup.querySelector('.close');
+    const closeContactBtn = contactPopup ? contactPopup.querySelector('.close') : null;
     const mainContent = document.getElementById('main-content');
 
-    if (mainContent) {
+    if (contactPopup && closeContactBtn && mainContent) {
         closeContactBtn.addEventListener('click', function() {
             contactPopup.style.display = 'none';
             mainContent.classList.remove('blur');
@@ -91,7 +91,7 @@ function initContactPopup() {
             }
         });
     } else {
-        console.error('main-content element not found');
+        console.error('Contact popup or related elements not found');
     }
 }
 
@@ -358,7 +358,9 @@ function initCustomScroll() {
         lastScrollTime = currentTime;
         isScrolling = true;
 
-        cancelAnimationFrame(scrollInertia);  // Avbryt tidigare animation
+        if (scrollInertia) {
+            cancelAnimationFrame(scrollInertia);  // Avbryt tidigare animation
+        }
 
         window.scrollBy({
             top: deltaY,
@@ -400,7 +402,6 @@ function initCustomScroll() {
         isScrolling = false;
     });
 }
-
 
 // Funktion för bildspel
 document.addEventListener('DOMContentLoaded', function() {
@@ -608,6 +609,8 @@ function initContactForm() {
             const mainContent = document.getElementById('main-content');
             if (mainContent) {
                 mainContent.classList.remove('blur');
+            } else {
+                console.error('main-content element not found');
             }
         }, function(error) {
             console.error('Failed to send message:', error);
@@ -615,7 +618,6 @@ function initContactForm() {
         });
     });
 }
-
 
 // Funktion för profil scroll bilder TOOLS
 document.addEventListener('DOMContentLoaded', function () {
