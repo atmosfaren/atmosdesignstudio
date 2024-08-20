@@ -617,7 +617,7 @@ function initContactForm() {
     contactForm.addEventListener('submit', function (event) {
         event.preventDefault();
 
-        emailjs.sendForm('service_4kzq9ek', 'template_65r56kv', contactForm)
+        emailjs.sendForm('din_service_id', 'din_template_id', contactForm)
         .then(function(response) {
             alert('Message sent successfully!');
             contactForm.reset();
@@ -634,6 +634,7 @@ function initContactForm() {
         });
     });
 }
+
 
 // Funktion för profil scroll bilder TOOLS
 document.addEventListener('DOMContentLoaded', function () {
