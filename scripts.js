@@ -610,7 +610,7 @@ function initHiringForms() {
             const formData = new FormData(form);
 
             // Försök att skicka formData till EmailJS
-            emailjs.sendForm('service_dbbqzuc', 'template_uzw80s6', form)
+            emailjs.sendForm('A-CuGtiiFvvuNPmEc', 'template_uzw80s6', form)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     alert('Application submitted successfully!');
@@ -632,7 +632,7 @@ function initContactForm() {
 
         const formData = new FormData(contactForm);
 
-        emailjs.sendForm('service_dbbqzuc', 'template_uzw80s6', contactForm)
+        emailjs.sendForm('A-CuGtiiFvvuNPmEc', 'template_uzw80s6', contactForm)
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 alert('Message sent successfully!');
