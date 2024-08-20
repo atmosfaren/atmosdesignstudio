@@ -504,21 +504,21 @@
 <section id="hiring" class="white-bg">
     <h2>We're looking for collaborators!</h2>
     <p>Atmos Design Studio is expanding. If you're passionate about design and technology, we want to hear from you. Join our team of creative professionals.</p>
-    <form class="hiring-form section-to-animate" aria-labelledby="hiring-form-title" enctype="multipart/form-data" method="POST">
+    <form class="hiring-form section-to-animate">
         <div class="form-group">
-            <input type="text" id="name" name="name" required aria-required="true" placeholder="Name">
+            <input type="text" id="name" name="name" required placeholder="Name">
         </div>
         <div class="form-group">
-            <input type="email" id="email" name="email" required aria-required="true" placeholder="Email">
+            <input type="email" id="email" name="email" required placeholder="Email">
         </div>
         <div class="form-group">
-            <input type="tel" id="phone" name="phone" required aria-required="true" placeholder="Phone">
+            <input type="tel" id="phone" name="phone" required placeholder="Phone">
         </div>
         <div class="form-group">
-            <input type="text" id="subject" name="subject" required aria-required="true" placeholder="Subject">
+            <input type="text" id="subject" name="subject" required placeholder="Subject">
         </div>
         <div class="form-group">
-            <select id="how-did-you-find-us" name="how-did-you-find-us" required aria-required="true">
+            <select id="how-did-you-find-us" name="how-did-you-find-us" required>
                 <option value="" disabled selected>How did you find us?</option>
                 <option value="google">Google</option>
                 <option value="referral">Referral</option>
@@ -531,10 +531,10 @@
         </div>
         <div class="form-group">
             <label for="resume">Attach Resume:</label>
-            <input type="file" id="resume" name="resume" required aria-required="true">
+            <input type="file" id="resume" name="resume" required>
         </div>
         <div class="form-group terms-container">
-            <input type="checkbox" id="terms-checkbox" required aria-required="true">
+            <input type="checkbox" id="terms-checkbox" required>
             <label for="terms-checkbox">Agree to the <a href="onboardingprotocol.pdf" target="_blank" id="terms-link">terms of employment</a></label>
         </div>
         <button class="cta-button" type="submit">Send Application</button>
@@ -609,34 +609,34 @@
                 <p>Dennis Lantz, the visionary behind Atmos Design Studio, brings over 15 years of diverse professional experience to the table. His journey spans across various industries, including UX design, agile project management, sales, customer relations, and performing arts. Dennis's leadership is characterized by a deep commitment to innovation, user-centered design, and fostering a collaborative team environment. His passion for excellence drives Atmos Design Studio's mission to deliver top-tier digital experiences.</p>
                 <br>
                 <h3>Write Us a Message Today</h3>
-                <form id="contactForm" method="POST" action="/send-application">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" required placeholder="First and Last Name">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="jobTitle" name="jobTitle" required placeholder="Job Title">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" required placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="phone" name="phone" required placeholder="Phone Number">
-                    </div>
-                    <div class="form-group">
-                        <label for="reason">Reason for Contact</label>
-                        <select id="reason" name="reason" required>
-                            <option value="" disabled selected>Choose from</option>
-                            <option value="project">Project Inquiry</option>
-                            <option value="services">Services Inquiry</option>
-                            <option value="feedback">Feedback</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="4" required placeholder="Write Us a Message"></textarea>
-                    </div>
-                    <button class="cta-button" type="submit">Send Message</button>
-                </form>
+                <form id="contactForm" method="POST">
+    <div class="form-group">
+        <input type="text" id="name" name="name" required placeholder="First and Last Name">
+    </div>
+    <div class="form-group">
+        <input type="text" id="jobTitle" name="jobTitle" required placeholder="Job Title">
+    </div>
+    <div class="form-group">
+        <input type="email" id="email" name="email" required placeholder="Email">
+    </div>
+    <div class="form-group">
+        <input type="tel" id="phone" name="phone" required placeholder="Phone Number">
+    </div>
+    <div class="form-group">
+        <label for="reason">Reason for Contact</label>
+        <select id="reason" name="reason" required>
+            <option value="" disabled selected>Choose from</option>
+            <option value="project">Project Inquiry</option>
+            <option value="services">Services Inquiry</option>
+            <option value="feedback">Feedback</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <textarea id="message" name="message" rows="4" required placeholder="Write Us a Message"></textarea>
+    </div>
+    <button class="cta-button" type="submit">Send Message</button>
+</form>
             </div>
             <div class="popup-section">
                 <h3>Company Location</h3>
@@ -780,42 +780,42 @@
                 <div class="popup-section">
                     <h3>Application Form</h3>
                     <p>Ready to join our team? Complete the application form below and submit your resume. We look forward to hearing from you.</p>
-                    <form class="hiring-form section-to-animate" aria-labelledby="hiring-form-title" enctype="multipart/form-data" method="POST">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" required aria-required="true" placeholder="Name">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" required aria-required="true" placeholder="Email">
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" name="phone" required aria-required="true" placeholder="Phone">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" required aria-required="true" placeholder="Subject">
-                        </div>
-                        <div class="form-group">
-                            <select id="how-did-you-find-us" name="how-did-you-find-us" required aria-required="true">
-                                <option value="" disabled selected>How did you find us?</option>
-                                <option value="google">Google</option>
-                                <option value="referral">Referral</option>
-                                <option value="social-media">Social Media</option>
-                                <option value="website">Website</option>
-                                <option value="advertisement">Advertisement</option>
-                                <option value="event">Event</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="resume">Attach Resume:</label>
-                            <input type="file" id="resume" name="resume" required aria-required="true">
-                        </div>
-                        <div class="form-group">
-                            <label for="terms-checkbox">
-                                <input type="checkbox" id="terms-checkbox" required aria-required="true"> Agree to the <a href="onboardingprotocol.pdf" target="_blank" id="terms-link">terms of employment</a>
-                            </label>
-                        </div>
-                        <button class="cta-button" type="submit">Send Application</button>
-                    </form>
+                    <form class="hiring-form section-to-animate">
+    <div class="form-group">
+        <input type="text" id="name" name="name" required placeholder="Name">
+    </div>
+    <div class="form-group">
+        <input type="email" id="email" name="email" required placeholder="Email">
+    </div>
+    <div class="form-group">
+        <input type="tel" id="phone" name="phone" required placeholder="Phone">
+    </div>
+    <div class="form-group">
+        <input type="text" id="subject" name="subject" required placeholder="Subject">
+    </div>
+    <div class="form-group">
+        <select id="how-did-you-find-us" name="how-did-you-find-us" required>
+            <option value="" disabled selected>How did you find us?</option>
+            <option value="google">Google</option>
+            <option value="referral">Referral</option>
+            <option value="social-media">Social Media</option>
+            <option value="website">Website</option>
+            <option value="advertisement">Advertisement</option>
+            <option value="event">Event</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="resume">Attach Resume:</label>
+        <input type="file" id="resume" name="resume" required>
+    </div>
+    <div class="form-group">
+        <label for="terms-checkbox">
+            <input type="checkbox" id="terms-checkbox" required> Agree to the <a href="onboardingprotocol.pdf" target="_blank" id="terms-link">terms of employment</a>
+        </label>
+    </div>
+    <button class="cta-button" type="submit">Send Application</button>
+</form>
                 </div>
             </div>
         </div>
