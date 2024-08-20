@@ -791,7 +791,7 @@ nav ul.nav-links.active {
 #services {
     padding: 50px 20px;
     text-align: center;
-    background-image: url('pictures/event.gif');
+    background-image: url('event.gif');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -849,7 +849,7 @@ nav ul.nav-links.active {
     outline: 5px;
     font-family: 'Josefin Sans', sans-serif;
     color: transparent;
-    background: url('pictures/event.gif');
+    background: url('event.gif');
     -webkit-background-clip: text;
     background-clip: text;
     background-size: cover;
@@ -1035,7 +1035,7 @@ nav ul.nav-links.active {
 
 .hero-text h1 {
     color: transparent;
-    background: url('pictures/event3.gif');
+    background: url('event3.gif');
     -webkit-background-clip: text;
     background-clip: text;
     background-size: cover;
@@ -2066,7 +2066,7 @@ form button.cta-button {
     position: relative;
     padding: 50px 20px;
     text-align: center;
-    background-image: url('pictures/hiring.png');
+    background-image: url('hiring.png');
     background-size: cover;
     background-position: center;
 }
