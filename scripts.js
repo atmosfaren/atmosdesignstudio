@@ -230,6 +230,11 @@ function initContactButton() {
     const newProjectPopup = document.getElementById('newProjectPopup');
     const mainContent = document.getElementById('main-content');
 
+    if (!mainContent) {
+        console.error('main-content element not found');
+        return;
+    }
+
     contactBtns.forEach(contactBtn => {
         contactBtn.addEventListener('click', function(event) {
             event.preventDefault();
@@ -241,11 +246,16 @@ function initContactButton() {
             if (newProjectPopup) newProjectPopup.style.display = 'none';
             
             // Öppnar kontaktfönstret
-            contactPopup.style.display = 'flex';
-            mainContent.classList.add('blur');
+            if (contactPopup) {
+                contactPopup.style.display = 'flex';
+                mainContent.classList.add('blur');
+            } else {
+                console.error('Contact popup element not found');
+            }
         });
     });
 }
+
 
 // Funktion för "Scroll to Top"-knappen
 function initScrollToTopButton() {
@@ -344,6 +354,8 @@ function initFAQToggle() {
 }
 
 // Funktion för anpassad scroll
+let scrollInertia;
+
 function initCustomScroll() {
     let scrollSpeed = 0;
     let isScrolling = false;
