@@ -610,11 +610,10 @@ function initHiringForms() {
                 phone: form.querySelector('input[name="phone"]').value,
                 subject: form.querySelector('input[name="subject"]').value,
                 message: form.querySelector('textarea[name="message"]').value,
-                resume: form.querySelector('input[name="resume"]').files[0],  // If file handling is required
                 howDidYouFindUs: form.querySelector('select[name="how-did-you-find-us"]').value
             };
 
-            emailjs.send('A-CuGtiiFvvuNPmEc', 'template_id', formData)
+            emailjs.send('A-CuGtiiFvvuNPmEc', 'DIN_TEMPLATE_ID_HÄR', formData)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     alert('Application submitted successfully!');
@@ -642,7 +641,7 @@ function initContactForm() {
             message: contactForm.querySelector('textarea[name="message"]').value
         };
 
-        emailjs.send('A-CuGtiiFvvuNPmEc', 'template_id', formData)
+        emailjs.send('A-CuGtiiFvvuNPmEc', 'DIN_TEMPLATE_ID_HÄR', formData)
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 alert('Message sent successfully!');
@@ -655,6 +654,7 @@ function initContactForm() {
             });
     });
 }
+
 
 
 // Funktion för profil scroll bilder TOOLS
