@@ -600,53 +600,49 @@ document.addEventListener('DOMContentLoaded', function () {
     handleScroll();
 });
 
-// Function for handling the hiring forms
-function initHiringForms() {
-    const hiringForms = document.querySelectorAll('.hiring-form');
-    hiringForms.forEach(form => {
-        form.addEventListener('submit', function (event) {
+// Funktionen initHiringForms
+    function initHiringForms() {
+        const hiringForms = document.querySelectorAll('.hiring-form');
+        hiringForms.forEach(form => {
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                // Skicka formuläret till EmailJS
+                emailjs.sendForm('service_4kzq9ek', 'template_n7nphxj', form)
+                    .then(function(response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        alert('Application submitted successfully!');
+                        form.reset();
+                    })
+                    .catch(function(error) {
+                        console.error('FAILED...', error);
+                        alert('Error submitting application. Please try again later.');
+                    });
+            });
+        });
+    }
+
+    // Funktionen initContactForm
+    function initContactForm() {
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function (event) {
             event.preventDefault();
 
-            const formData = new FormData(form);
-
-            // Försök att skicka formData till EmailJS
-            emailjs.sendForm('A-CuGtiiFvvuNPmEc', 'template_uzw80s6', form)
+            // Skicka formuläret till EmailJS
+            emailjs.sendForm('service_4kzq9ek', 'template_n7nphxj', contactForm)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
-                    alert('Application submitted successfully!');
-                    form.reset();
+                    alert('Message sent successfully!');
+                    contactForm.reset();
+                    document.getElementById('contactPopup').style.display = 'none';
+                    document.getElementById('main-content').classList.remove('blur');
                 })
                 .catch(function(error) {
                     console.error('FAILED...', error);
-                    alert('Error submitting application. Please try again later.');
+                    alert('Error sending message. Please try again later.');
                 });
         });
-    });
-}
-
-// Function for handling the contact form (om du använder denna funktion)
-function initContactForm() {
-    const contactForm = document.getElementById('contactForm');
-    contactForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        const formData = new FormData(contactForm);
-
-        emailjs.sendForm('A-CuGtiiFvvuNPmEc', 'template_uzw80s6', contactForm)
-            .then(function(response) {
-                console.log('SUCCESS!', response.status, response.text);
-                alert('Message sent successfully!');
-                contactForm.reset();
-                document.getElementById('contactPopup').style.display = 'none';
-                document.getElementById('main-content').classList.remove('blur');
-            })
-            .catch(function(error) {
-                console.error('FAILED...', error);
-                alert('Error sending message. Please try again later.');
-            });
-    });
-}
-
+    }
 
 // Funktion för profil scroll bilder TOOLS
 document.addEventListener('DOMContentLoaded', function () {
