@@ -618,7 +618,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 };
 
                 // Försök att skicka formData till EmailJS
-                emailjs.send('service_dbbqzuc', 'template_uzw80s6', formData)
+                emailjs.send('A-CuGtiiFvvuNPmEc', 'template_uzw80s6', formData)
                     .then(function(response) {
                         console.log('SUCCESS!', response.status, response.text);
                         alert('Application submitted successfully!');
@@ -647,7 +647,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 message: contactForm.querySelector('textarea[name="message"]').value
             };
 
-            emailjs.send('service_dbbqzuc', 'template_uzw80s6', formData)
+            emailjs.send('A-CuGtiiFvvuNPmEc', 'template_uzw80s6', formData)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     alert('Message sent successfully!');
