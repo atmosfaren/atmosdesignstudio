@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', function () {
     initScrollToTopButton();
     initClientReviewsScroll();
     initCookieConsent();
-    initContactForm();
+    initContactForm();  // For the contact form
+    initHiringForms();  // For the two hiring forms
     initTermsCheckbox();
-    initNewProjectPopup(); 
-
+    initNewProjectPopup();
 
     // Funktion för att hantera att användaren måste läsa villkoren innan de kan bocka av rutan
     function initTermsCheckbox() {
@@ -597,33 +597,55 @@ document.addEventListener('DOMContentLoaded', function () {
     handleScroll();
 });
 
+// Funktion för kontaktformulär hiring
+function initHiringForms() {
+    const hiringForms = document.querySelectorAll('.hiring-form');
+    hiringForms.forEach(form => {
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
 
-// Funktion för kontaktformulär
+            const formData = {
+                name: form.querySelector('input[name="name"]').value,
+                email: form.querySelector('input[name="email"]').value,
+                message: form.querySelector('textarea[name="message"]').value
+            };
+
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_HIRING_TEMPLATE_ID', formData)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Application submitted successfully!');
+                    form.reset();
+                }, function(error) {
+                    console.error('FAILED...', error);
+                    alert('Error submitting application. Please try again later.');
+                });
+        });
+    });
+}
+
+// Funktion för kontaktformulär contact
 function initContactForm() {
     const contactForm = document.getElementById('contactForm');
     contactForm.addEventListener('submit', function (event) {
         event.preventDefault();
 
-        const formData = new FormData(contactForm);
+        const formData = {
+            name: contactForm.querySelector('input[name="name"]').value,
+            email: contactForm.querySelector('input[name="email"]').value,
+            message: contactForm.querySelector('textarea[name="message"]').value
+        };
 
-        fetch(contactForm.action, {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => {
-            if (response.ok) {
+        emailjs.send('YOUR_SERVICE_ID', 'YOUR_CONTACT_TEMPLATE_ID', formData)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
                 alert('Message sent successfully!');
                 contactForm.reset();
                 document.getElementById('contactPopup').style.display = 'none';
                 document.getElementById('main-content').classList.remove('blur');
-            } else {
+            }, function(error) {
+                console.error('FAILED...', error);
                 alert('Error sending message. Please try again later.');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Error sending message. Please try again later.');
-        });
+            });
     });
 }
 
