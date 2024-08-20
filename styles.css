@@ -556,7 +556,7 @@ nav ul.nav-links.active {
     text-shadow: none;
     position: relative;
     z-index: 2;
-    background: url('pictures/event.gif');
+    background: url('event.gif');
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
