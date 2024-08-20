@@ -299,28 +299,18 @@ function initSmoothScroll() {
     });
 }
 
-// Funktion för formulärhantering
+// Placera den uppdaterade initFormSubmission-funktionen här
 function initFormSubmission() {
     document.querySelector('.hiring-form').addEventListener('submit', function(event) {
         event.preventDefault();
 
-        const formData = new FormData(this);
-
-        fetch(this.action, {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => {
-            if (response.ok) {
-                alert('Form submitted successfully!');
-                this.reset();
-            } else {
-                alert('Error submitting form. Please try again.');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Error submitting form. Please try again.');
+        emailjs.sendForm('service_4kzq9ek', 'template_65r56kv', this)
+        .then(function(response) {
+            alert('Application sent successfully!');
+            document.querySelector('.hiring-form').reset();
+        }, function(error) {
+            console.error('Failed to send application:', error);
+            alert('Failed to send application. Please try again later.');
         });
     });
 }
@@ -604,28 +594,19 @@ function initContactForm() {
     contactForm.addEventListener('submit', function (event) {
         event.preventDefault();
 
-        const formData = new FormData(contactForm);
-
-        fetch(contactForm.action, {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => {
-            if (response.ok) {
-                alert('Message sent successfully!');
-                contactForm.reset();
-                document.getElementById('contactPopup').style.display = 'none';
-                document.getElementById('main-content').classList.remove('blur');
-            } else {
-                alert('Error sending message. Please try again later.');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Error sending message. Please try again later.');
+        emailjs.sendForm('service_4kzq9ek', 'template_65r56kv', contactForm)
+        .then(function(response) {
+            alert('Message sent successfully!');
+            contactForm.reset();
+            document.getElementById('contactPopup').style.display = 'none';
+            document.getElementById('main-content').classList.remove('blur');
+        }, function(error) {
+            console.error('Failed to send message:', error);
+            alert('Failed to send message. Please try again later.');
         });
     });
 }
+
 
 // Funktion för profil scroll bilder TOOLS
 document.addEventListener('DOMContentLoaded', function () {
