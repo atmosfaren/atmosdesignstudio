@@ -529,7 +529,7 @@ nav ul.nav-links.active {
 }
 
 .about-solutions {
-    background-image: url('pictures/event.gif');
+    background-image: url('event.gif');
     background-size: cover;
     background-position: center;
     position: relative;
