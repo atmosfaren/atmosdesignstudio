@@ -256,7 +256,6 @@ function initContactButton() {
     });
 }
 
-
 // Funktion för "Scroll to Top"-knappen
 function initScrollToTopButton() {
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
@@ -354,13 +353,12 @@ function initFAQToggle() {
 }
 
 // Funktion för anpassad scroll
-let scrollInertia;
+let scrollInertia;  // Lägg till denna variabel högst upp i din initCustomScroll-funktion eller globalt
 
 function initCustomScroll() {
     let scrollSpeed = 0;
     let isScrolling = false;
     let lastScrollTime = Date.now();
-    let scrollInertia;  // Lägg till denna variabel
 
     function customScroll(event) {
         const deltaY = event.deltaY;
@@ -371,7 +369,7 @@ function initCustomScroll() {
         isScrolling = true;
 
         if (scrollInertia) {
-            cancelAnimationFrame(scrollInertia);  // Avbryt tidigare animation
+            cancelAnimationFrame(scrollInertia);  // Avbryt tidigare animation om den existerar
         }
 
         window.scrollBy({
@@ -414,6 +412,7 @@ function initCustomScroll() {
         isScrolling = false;
     });
 }
+
 
 // Funktion för bildspel
 document.addEventListener('DOMContentLoaded', function() {
