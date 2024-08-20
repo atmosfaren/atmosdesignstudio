@@ -607,10 +607,14 @@ function initHiringForms() {
             const formData = {
                 name: form.querySelector('input[name="name"]').value,
                 email: form.querySelector('input[name="email"]').value,
-                message: form.querySelector('textarea[name="message"]').value
+                phone: form.querySelector('input[name="phone"]').value,
+                subject: form.querySelector('input[name="subject"]').value,
+                message: form.querySelector('textarea[name="message"]').value,
+                resume: form.querySelector('input[name="resume"]').files[0],  // If file handling is required
+                howDidYouFindUs: form.querySelector('select[name="how-did-you-find-us"]').value
             };
 
-            emailjs.send('A-CuGtiiFvvuNPmEc', 'your_actual_template_id', formData)
+            emailjs.send('A-CuGtiiFvvuNPmEc', 'template_id', formData)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     alert('Application submitted successfully!');
@@ -631,11 +635,14 @@ function initContactForm() {
 
         const formData = {
             name: contactForm.querySelector('input[name="name"]').value,
+            jobTitle: contactForm.querySelector('input[name="jobTitle"]').value,
             email: contactForm.querySelector('input[name="email"]').value,
+            phone: contactForm.querySelector('input[name="phone"]').value,
+            reason: contactForm.querySelector('select[name="reason"]').value,
             message: contactForm.querySelector('textarea[name="message"]').value
         };
 
-        emailjs.send('A-CuGtiiFvvuNPmEc', 'your_actual_template_id', formData)
+        emailjs.send('A-CuGtiiFvvuNPmEc', 'template_id', formData)
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 alert('Message sent successfully!');
@@ -648,6 +655,7 @@ function initContactForm() {
             });
     });
 }
+
 
 // Funktion för profil scroll bilder TOOLS
 document.addEventListener('DOMContentLoaded', function () {
