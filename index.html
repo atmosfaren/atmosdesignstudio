@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atmos Design Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="pictures/atmos.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav role="navigation">
+        <div class="nav-section left">
+            <div class="logo">
+                <a href="#header" aria-label="Atmos Design Studio Home">
+                    <img src="pictures/atmos.png" alt="Atmos Design Studio Logo" class="social-icon">
+                </a>
+            </div>
+            <div class="social-media-icons">
+                <a href="https://twitter.com/yourprofile" target="_blank">
+                    <img src="pictures/twitter.png" alt="Twitter" class="social-icon">
+                </a>
+                <a href="https://facebook.com/yourprofile" target="_blank">
+                    <img src="pictures/facebook.png" alt="Facebook" class="social-icon">
+                </a>
+                <a href="https://instagram.com/yourprofile" target="_blank">
+                    <img src="pictures/instagram.png" alt="Instagram" class="social-icon">
+                </a>
+            </div>
+        </div>
+        <div class="nav-section center">
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a role="menuitem" href="#about-us">About</a></li>
+                <li role="none"><a role="menuitem" href="#additional-info">Projects</a></li>
+                <li role="none"><a role="menuitem" href="#why-us">Services</a></li>
+                <li role="none"><a role="menuitem" href="#experiences">Testimonials</a></li>
+                <li role="none"><a role="menuitem" href="#faq">Questions</a></li>
+            </ul>
+        </div>
+        <div class="nav-section right">
+            <button class="cta-button book-meeting">Contact</button>
+            <div class="burger" aria-label="Menu Toggle">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header id="header">
+        <div class="hero">
+            <div class="hero-slideshow">
+                <div class="slide" style="background-image: url('pictures/hero1.png');"></div>
+                <div class="slide" style="background-image: url('pictures/hero2.png');"></div>
+                <div class="slide" style="background-image: url('pictures/hero3.png');"></div>
+                <div class="slide" style="background-image: url('pictures/hero4.png');"></div>
+            </div>
+            <div class="hero-text">
+                <h1><strong>ATMOS DESIGN STUDIO</strong></h1><br>
+                <h3>Innovating User Experiences with a Passion for Design</h3>
+                <div class="cta-buttons">
+                    <button class="aboutCompanyBtn cta-button">About</button>
+                    <a href="#hiring">
+                        <button class="cta-button cta-button-career">Collaborate</button>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-navigation">
+                <div class="prev" onclick="plusSlides(-1)">&#10094;</div>
+                <div class="next" onclick="plusSlides(1)">&#10095;</div>
+            </div>
+            <div class="hero-dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    </header>
+
+<!-- Main Content -->
+<main>
+    <!-- Partners Section -->
+    <section id="partners" class="white-bg section-to-animate" style="padding: 0; margin: 0;">
+        <p>Trusted by</p>
+        <div id="scroll" class="scroll-container">
+            <div class="scroll-content">
+                <img src="pictures/futuregames.png" alt="Partner 1">
+                <img src="pictures/changemaker.png" alt="Partner 2">
+                <img src="pictures/parkingtime.png" alt="Partner 3">
+                <img src="pictures/rise.png" alt="Partner 4">
+                <img src="pictures/futuregames.png" alt="Partner 1">
+                <img src="pictures/changemaker.png" alt="Partner 2">
+                <img src="pictures/parkingtime.png" alt="Partner 3">
+                <img src="pictures/rise.png" alt="Partner 4">
+                <img src="pictures/futuregames.png" alt="Partner 1">
+                <img src="pictures/changemaker.png" alt="Partner 2">
+                <img src="pictures/parkingtime.png" alt="Partner 3">
+                <img src="pictures/rise.png" alt="Partner 4">
+                <img src="pictures/futuregames.png" alt="Partner 1">
+                <img src="pictures/changemaker.png" alt="Partner 2">
+                <img src="pictures/parkingtime.png" alt="Partner 3">
+                <img src="pictures/rise.png" alt="Partner 4">
+                <img src="pictures/futuregames.png" alt="Partner 1">
+                <img src="pictures/changemaker.png" alt="Partner 2">
+                <img src="pictures/parkingtime.png" alt="Partner 3">
+                <img src="pictures/rise.png" alt="Partner 4">
+            </div>
+        </div>
+    </section>
+<!-- About Us Section -->
+<section id="about-us" class="bg-white" style="padding: 0; margin: 0;">
+    <div class="about-container section-to-animate">
+        <div class="about-text">
+            <div class="text-content">
+                <h2>About Us</h2>
+                <p>Welcome to Atmos Design Studio, where creativity meets functionality. We are a dynamic team of UX and UI designers, driven by a passion for crafting seamless user experiences and innovative design solutions. With a deep understanding of design principles and a commitment to continuous learning, we strive to bring our clients' visions to life in the digital realm.</p>
+                <br><p>Our journey began in 2023 when we met during our studies at Changemaker Educations, and since then, we've combined our diverse backgrounds and skills to deliver exceptional results in every project we undertake.</p>
+            </div>
+            <button class="aboutCompanyBtn cta-button">Learn more</button>
+        </div>
+    </div>
+    <div class="about-solutions section-to-animate">
+        <div class="text-content">
+            <h2>Innovative Design Solutions</h2>
+            <p>At Atmos Design Studio, we specialize in leveraging both contemporary and traditional design methodologies, including UX research, design principles, and the Double Diamond model. Our approach ensures that each project is handled with the utmost care, creativity, and respect for the end user's needs.</p>
+        </div>
+    </div>
+</section>
+
+ <!-- Atmos Projects -->
+<section id="additional-info" class="white-bg">
+    <br><br><h2>Our Projects</h2>
+    <p>A more in-depth view of our projects</p><br>
+    <div class="info-cards section-to-animate">
+        <div class="info-card" id="parking-time-card" style="background-image: url('pictures/hero4.png');">
+            <h2>Parking Time</h2>
+            <button class="cta-button open-new-project-popup">View Project</button>
+        </div>
+        <div class="info-card section-to-animate" style="background-image: url('pictures/hero5.png');">
+            <h2>Red Milk LLC</h2>
+            <button class="cta-button open-in-progress-popup">In progress</button>
+        </div>
+        <div class="info-card section-to-animate" style="background-image: url('pictures/hero1.png');">
+            <h2>Ahum</h2>
+            <button class="cta-button open-in-progress-popup">View Project</button>
+        </div>
+        <div class="info-card section-to-animate" style="background-image: url('pictures/hero2.png');">
+            <h2>Carl F</h2>
+            <button class="cta-button open-in-progress-popup">View Project</button>
+        </div>
+    </div>
+</section>
+
+
+ <!-- Services Section -->
+<section id="services" class="white-bg">
+    <div class="contaciner">
+    <h2>Our Strategic Approach</h2>
+    <p>Driven by Design, Fueled by Innovation with</p>
+    <p>Your Vision, Perfected Through Our Process</p>
+    </div>
+    <div class="steps">
+        <div class="step section-to-animate">
+            <h1><strong>1</strong></h1>
+            <p><strong>Deep Dive into Your Vision</strong></p>
+        </div>
+        <div class="step section-to-animate">
+            <h1><strong>2</strong></h1>
+            <p><strong>Innovative Design & Prototyping</strong></p>
+        </div>
+        <div class="step section-to-animate">
+            <h1><strong>3</strong></h1>
+            <p><strong>User-Centric Testing & Iteration</strong></p>
+        </div>
+        <div class="step section-to-animate">
+            <h1><strong>4</strong></h1>
+            <p><strong>Seamless Delivery & Ongoing Support</strong></p>
+        </div>
+        <div class="step section-to-animate">
+            <h1><strong>5</strong></h1>
+            <p><strong>Relentless Pursuit of Excellence</strong></p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Why Us Section -->
+<section id="why-us" class="bg-white">
+    <div class="container">
+        <br><br><h2>Our Values & Services</h2>
+        <p>Why Choose Atmos Design Studio?</p>
+
+        <div class="benefits">
+            <div class="benefit section-to-animate">
+                <h3>Experience and Expertise</h3>
+                <div class="benefit-content">
+                    <p>With a combined experience in UX and UI design, agile project management, and user research, our team delivers designs that are both innovative and effective. Our expertise ensures that we understand your business needs and create solutions that truly resonate with your audience.</p>
+                    <img src="pictures/benefit1.png" alt="Experience and Expertise">
+                </div>
+            </div>
+
+            <div class="benefit section-to-animate">
+                <h3>Client-Focused Approach</h3>
+                <div class="benefit-content">
+                    <p>Your success is our priority. We take the time to understand your goals, challenges, and target audience, working closely with you to develop customized solutions that meet your specific needs. Our collaborative approach ensures that you are involved at every stage of the project.</p>
+                    <img src="pictures/benefit2.png" alt="Client-Focused Approach">
+                </div>
+            </div>
+
+            <div class="benefit section-to-animate">
+                <h3>Innovative Solutions</h3>
+                <div class="benefit-content">
+                    <p>Innovation is at the heart of what we do. We use the latest design thinking methodologies, including the double diamond approach, to explore and refine creative solutions that push the boundaries of traditional design. Whether it's conceptualizing for startups, rebranding, or developing a new business strategy, we bring fresh ideas to the table.</p>
+                    <img src="pictures/benefit3.png" alt="Innovative Solutions">
+                </div>
+            </div>
+
+            <div class="benefit section-to-animate">
+                <h3>Commitment to Quality</h3>
+                <div class="benefit-content">
+                    <p>We are dedicated to delivering the highest quality in every project. Our meticulous attention to detail and commitment to excellence ensure that the final product not only meets but exceeds your expectations. We take pride in our work and strive for perfection in everything we do.</p>
+                    <img src="pictures/benefit4.png" alt="Commitment to Quality">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Tools Section -->
+<section id="tools" class="white-bg section-to-animate" style="padding: 0; margin: 0;">
+    <p>Our Toolshed</p>
+    <div id="tools-scroll" class="scroll-container">
+        <div class="scroll-content">
+            <img src="pictures/teams.png" alt="Tool 1">
+            <img src="pictures/figma.png" alt="Tool 2">
+            <img src="pictures/miro.png" alt="Tool 3">
+            <img src="pictures/powerpoint.png" alt="Tool 4">
+            <img src="pictures/excel.png" alt="Tool 5">
+            <img src="pictures/google.png" alt="Tool 6">
+            <img src="pictures/adobe.png" alt="Tool 7">
+            <img src="pictures/word.png" alt="Tool 8">
+            <img src="pictures/mural.png" alt="Tool 9"> 
+            <img src="pictures/canva.png" alt="Tool 10">
+            <img src="pictures/Trello.png" alt="Tool 11">
+            <img src="pictures/html.png" alt="Tool 12">
+            <img src="pictures/css.png" alt="Tool 13">
+            <img src="pictures/javascript.png" alt="Tool 14">
+            <img src="pictures/teams.png" alt="Tool 1">
+            <img src="pictures/figma.png" alt="Tool 2">
+            <img src="pictures/miro.png" alt="Tool 3">
+            <img src="pictures/powerpoint.png" alt="Tool 4">
+            <img src="pictures/excel.png" alt="Tool 5">
+            <img src="pictures/google.png" alt="Tool 6">
+            <img src="pictures/adobe.png" alt="Tool 7">
+            <img src="pictures/word.png" alt="Tool 8">
+            <img src="pictures/mural.png" alt="Tool 9"> 
+            <img src="pictures/canva.png" alt="Tool 10">
+            <img src="pictures/Trello.png" alt="Tool 11">
+            <img src="pictures/html.png" alt="Tool 12">
+            <img src="pictures/css.png" alt="Tool 13">
+            <img src="pictures/javascript.png" alt="Tool 14">
+        </div>
+    </div>
+</section>
+
+
+        <!-- Projects Section -->
+        <section id="experiences" class="white-bg">
+            <h2>Client Testimonials</h2>
+            <p>Explore some of our reviews</p>
+            <div class="client-testimonials-container section-to-animate">
+                <button class="scroll-btn prev-btn">&lt;</button>
+                <div class="client-testimonials-scroll">
+<div class="client-testimonial">
+    <div class="client-testimonial-header">
+        <img src="pictures/pes.jpg" alt="Company Logo 1" class="client-company-logo">
+        <h3>Red Milk LLC</h3>
+    </div>
+    <p>"Atmos Design Studio helped us develop a user-centered <br>
+    app that suits the needs of our users and created a koncept <br>
+    that has transformed our business."</p>
+    <p>Out team was very happy with the end result and want to <br>
+    keep working together, it was an effortless collaboration.<br>
+    <p class="client-testimonial-date">August 30, 2024</p>
+    <div class="client-testimonial-profile">
+        <img src="pictures/callehansson.jpg" alt="Calle Hansson" class="client-profile-pic">
+        <div class="client-profile-info">
+            <span>Calle Hansson</span>
+            <span>CEO, Red Milk LLC</span>
+        </div>
+        <button class="cta-button open-in-progress-popup">In progress</button>
+    </div>
+</div>
+
+<div class="client-testimonial">
+    <div class="client-testimonial-header">
+        <img src="pictures/parkingtime.png" alt="Company Logo 2" class="client-company-logo">
+        <h3>Parking Time</h3>
+    </div>
+    <p>"During the spring, Parking Time collaborated with students <br>
+    at Changemaker Education. The collaboration resulted in <br>
+    innovative and creative solutions that can make <br>
+    Parking Time market leader in smart parking."</p>
+    <p>Read more about the project <a href="https://parking-time-sweden-ab.vercel.app/sv/news/parking-time-changemaker" target="_blank" class="cta-link">here</a></p>
+    <p class="client-testimonial-date">Mars 11, 2024</p>
+    <div class="client-testimonial-profile">
+        <img src="pictures/matilda.png" alt="Matilda Öhman" class="client-profile-pic">
+        <div class="client-profile-info">
+            <span>Matilda Öhman</span>
+            <span>CEO, Parking Time</span>
+        </div>
+        <button class="cta-button right-aligned-button open-new-project-popup">View Project</button>
+    </div>
+</div>
+
+<div class="client-testimonial">
+    <div class="client-testimonial-header">
+        <img src="pictures/pes.jpg" alt="Company Logo 1" class="client-company-logo">
+        <h3>Red Milk LLC</h3>
+    </div>
+    <p>"Atmos Design Studio helped us develop a user-centered <br>
+    app that suits the needs of our users and created a koncept <br>
+    that has transformed our business."</p>
+    <p>Out team was very happy with the end result and want to <br>
+    keep working together, it was an effortless collaboration.<br>
+    <p class="client-testimonial-date">August 30, 2024</p>
+    <div class="client-testimonial-profile">
+        <img src="pictures/callehansson.jpg" alt="Calle Hansson" class="client-profile-pic">
+        <div class="client-profile-info">
+            <span>Calle Hansson</span>
+            <span>CEO, Red Milk LLC</span>
+        </div>
+        <button class="cta-button open-in-progress-popup">In progress</button>
+    </div>
+</div>
+
+<div class="client-testimonial">
+    <div class="client-testimonial-header">
+        <img src="pictures/parkingtime.png" alt="Company Logo 2" class="client-company-logo">
+        <h3>Parking Time</h3>
+    </div>
+    <p>"During the spring, Parking Time collaborated with students <br>
+    at Changemaker Education. The collaboration resulted in <br>
+    innovative and creative solutions that can make <br>
+    Parking Time market leader in smart parking."</p>
+    <p>Read more about the project <a href="https://parking-time-sweden-ab.vercel.app/sv/news/parking-time-changemaker" target="_blank" class="cta-link">here</a></p>
+    <p class="client-testimonial-date">Mars 11, 2024</p>
+    <div class="client-testimonial-profile">
+        <img src="pictures/matilda.png" alt="Matilda Öhman" class="client-profile-pic">
+        <div class="client-profile-info">
+            <span>Matilda Öhman</span>
+            <span>CEO, Parking Time</span>
+        </div>
+        <button class="cta-button right-aligned-button open-new-project-popup">View Project</button>
+    </div>
+</div>
+
+<div class="client-testimonial">
+    <div class="client-testimonial-header">
+        <img src="pictures/pes.jpg" alt="Company Logo 1" class="client-company-logo">
+        <h3>Red Milk LLC</h3>
+    </div>
+    <p>"Atmos Design Studio helped us develop a user-centered <br>
+    app that suits the needs of our users and created a koncept <br>
+    that has transformed our business."</p>
+    <p>Out team was very happy with the end result and want to <br>
+    keep working together, it was an effortless collaboration.<br>
+    <p class="client-testimonial-date">August 30, 2024</p>
+    <div class="client-testimonial-profile">
+        <img src="pictures/callehansson.jpg" alt="Calle Hansson" class="client-profile-pic">
+        <div class="client-profile-info">
+            <span>Calle Hansson</span>
+            <span>CEO, Red Milk LLC</span>
+        </div>
+        <button class="cta-button open-in-progress-popup">In progress</button>
+    </div>
+</div>
+
+<div class="client-testimonial">
+    <div class="client-testimonial-header">
+        <img src="pictures/parkingtime.png" alt="Company Logo 2" class="client-company-logo">
+        <h3>Parking Time</h3>
+    </div>
+    <p>"During the spring, Parking Time collaborated with students <br>
+    at Changemaker Education. The collaboration resulted in <br>
+    innovative and creative solutions that can make <br>
+    Parking Time market leader in smart parking."</p>
+    <p>Read more about the project <a href="https://parking-time-sweden-ab.vercel.app/sv/news/parking-time-changemaker" target="_blank" class="cta-link">here</a></p>
+    <p class="client-testimonial-date">Mars 11, 2024</p>
+    <div class="client-testimonial-profile">
+        <img src="pictures/matilda.png" alt="Matilda Öhman" class="client-profile-pic">
+        <div class="client-profile-info">
+            <span>Matilda Öhman</span>
+            <span>CEO, Parking Time</span>
+        </div>
+        <button class="cta-button right-aligned-button open-new-project-popup">View Project</button>
+    </div>
+</div>
+
+                </div>
+                <button class="scroll-btn next-btn">&gt;</button>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="white-to-grey">
+            <h2>Do you have a question?</h2>
+            <div class="faq-section section-to-animate">
+                <div class="faq-item">
+                    <p class="faq-question"><strong>What is Atmos Design Studio?</strong></p>
+                    <div class="faq-answer">
+                        <p>We are a design studio specializing in UX/UI design, agile project management, and creating innovative digital experiences.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-question"><strong>How can I contact you?</strong></p>
+                    <div class="faq-answer">
+                        <p>You can contact us via email at info@atmosdesignstudio.com or call us at +46 (0) 709 45 54 59.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-question"><strong>What services do you offer?</strong></p>
+                    <div class="faq-answer">
+                        <p>We offer a range of services including UX/UI design, prototyping, user research, and agile project management.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-question"><strong>How do I book your services?</strong></p>
+                    <div class="faq-answer">
+                        <p>You can book our services by filling out the contact form on our website or calling us directly.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-question"><strong>How do I start a collaboration?</strong></p>
+                    <div class="faq-answer">
+                        <p>You can apply by visiting our collaboration page and submitting your application online.</p>
+                    </div>
+                </div>
+            </div><br><br>
+            <h3>Still have a question?</h3><br>
+            <button class="learnMoreBtn cta-button">Learn more</button>
+        </section>
+
+<!-- CEO Section -->
+<section id="ceo" class="black-bg">
+    <div class="ceo-container">
+        <div class="profile-container">
+            <!-- Vänstra boxen -->
+            <div class="profile-box left-box section-to-animate">
+                <div class="slideshow-container">
+                    <img src="pictures/profil4.png" alt="Profile 1">
+                    <img src="pictures/profil2.png" alt="Profile 2">
+                    <img src="pictures/profil3.png" alt="Profile 3">
+                    <img src="pictures/profil4.png" alt="Profile 4">
+                    <img src="pictures/profil5.png" alt="Profile 5">
+                    <img src="pictures/profil6.png" alt="Profile 6">
+                </div>
+                <div class="slideshow-container2">
+                    <img src="pictures/emoji1.png" alt="Emoji 1">
+                    <img src="pictures/emoji2.png" alt="Emoji 2">
+                    <img src="pictures/emoji3.png" alt="Emoji 3">
+                    <img src="pictures/emoji4.png" alt="Emoji 4">
+                    <img src="pictures/emoji5.png" alt="Emoji 5">
+                    <img src="pictures/emoji6.png" alt="Emoji 6">
+                    <img src="pictures/emoji7.png" alt="Emoji 7">
+                    <img src="pictures/emoji8.png" alt="Emoji 8">
+                </div>
+                <div class="profile-text">
+                    <p>Dennis Lantz, CEO</p>
+                    <p>
+                        <span class="email">info@atmosdesignstudio.com</span>
+                        <img src="pictures/copy.png" alt="Copy Email" class="email-icon copy-icon" style="width: 30px; height: 30px;" onclick="copyToClipboard('info@atmosdesignstudio.com')">
+                        <a href="mailto:info@atmosdesignstudio.com">
+                            <img src="pictures/mail.png" alt="Mail" class="email-icon mail-icon" style="width: 30px; height: 30px;">
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Högra boxen -->
+            <div class="profile-box right-box section-to-animate">
+                <h2>Do you have any request?</h2>
+                <p>Contact us to find out more about our design solutions, and how we can help bring your vision to life.</p><br><br>
+                <button class="cta-button book-meeting">Get a consultation</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Hiring Section -->
+<section id="hiring" class="white-bg">
+    <h2>We're looking for collaborators!</h2>
+    <p>Atmos Design Studio is expanding. If you're passionate about design and technology, we want to hear from you. Join our team of creative professionals.</p>
+    <form class="hiring-form section-to-animate" aria-labelledby="hiring-form-title" enctype="multipart/form-data" method="POST" action="/send-application">
+        <div class="form-group">
+            <input type="text" id="name" name="name" required aria-required="true" placeholder="Name">
+        </div>
+        <div class="form-group">
+            <input type="email" id="email" name="email" required aria-required="true" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <input type="tel" id="phone" name="phone" required aria-required="true" placeholder="Phone">
+        </div>
+        <div class="form-group">
+            <input type="text" id="subject" name="subject" required aria-required="true" placeholder="Subject">
+        </div>
+        <div class="form-group">
+            <select id="how-did-you-find-us" name="how-did-you-find-us" required aria-required="true">
+                <option value="" disabled selected>How did you find us?</option>
+                <option value="google">Google</option>
+                <option value="referral">Referral</option>
+                <option value="social-media">Social Media</option>
+                <option value="website">Website</option>
+                <option value="advertisement">Advertisement</option>
+                <option value="event">Event</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="resume">Attach Resume:</label>
+            <input type="file" id="resume" name="resume" required aria-required="true">
+        </div>
+        <div class="form-group terms-container">
+            <input type="checkbox" id="terms-checkbox" required aria-required="true">
+            <label for="terms-checkbox">Agree to the <a href="documents/onboardingprotocol.pdf" target="_blank" id="terms-link">terms of employment</a></label>
+        </div>
+        <button class="cta-button" type="submit">Send Application</button>
+    </form>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-pes">
+                <h3>Atmos Design Studio</h3>
+                <p>We are committed to delivering innovative and user-centered design solutions. Our mission is to create exceptional digital experiences that meet the unique needs of our clients.</p><br><br>
+                <p><a href="documents/onboardingprotocol.pdf" target="_blank">Booking Terms</a></p><br>
+                <p><a href="documents/onboardingprotocol.pdf" target="_blank">Privacy Policy</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                <li role="none"><a role="menuitem" href="#about-us">About</a></li>
+                <li role="none"><a role="menuitem" href="#additional-info">Our Projects</a></li>
+                <li role="none"><a role="menuitem" href="#why-us">Our Values</a></li>
+                <li role="none"><a role="menuitem" href="#experiences">Testimonials</a></li>
+                <li role="none"><a role="menuitem" href="#faq">Questions</a></li>
+                <li role="none"><a role="menuitem" href="#hiring">Co-lab</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company Location</h3>
+                <p>Adress: Forskningsringen 94, 174 61 Sundbyberg</p>
+                <p>City: Stockholm, Sweden</p>
+                <p>Call: +46 (0) 709 45 54 59</p>
+                <p>Email: <span class="email">info@atmosdesignstudio.com</span>
+                    <img src="pictures/copy.png" alt="Copy Email" class="email-icon copy-icon" style="width: 20px; height: 20px;" onclick="copyToClipboard('info@atmosdesignstudio.com')">
+                    <a href="mailto:info@atmosdesignstudio.com">
+                        <img src="pictures/mail.png" alt="Mail" class="email-icon mail-icon" style="width: 20px; height: 20px;">
+                    </a>
+                </p><br>
+                <div class="social-media-icons">
+                    <a href="https://twitter.com/yourprofile" target="_blank">
+                        <img src="pictures/twitter.png" alt="Twitter" class="social-icon">
+                    </a>
+                    <a href="https://facebook.com/yourprofile" target="_blank">
+                        <img src="pictures/facebook.png" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="https://instagram.com/yourprofile" target="_blank">
+                        <img src="pictures/instagram.png" alt="Instagram" class="social-icon">
+                    </a>
+                    <a href="https://youtube.com/yourprofile" target="_blank">
+                        <img src="pictures/youtube.png" alt="YouTube" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Atmos Design Studio. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+<!-- Popup för Kontakt -->
+<div id="contactPopup" class="popup" data-lat="40.718112" data-lng="-73.955550">
+    <div class="popup-content">
+        <div class="popup-header">
+            <h2>Get a Consultation</h2>
+            <span class="close">&times;</span>
+        </div>
+        <div class="popup-body">
+            <div class="popup-section">
+                <img src="pictures/profil2.png" alt="Dennis Lantz, CEO" class="ceo-picture">
+                <h3>Meet Our Founder</h3>
+                <p>Dennis Lantz, the visionary behind Atmos Design Studio, brings over 15 years of diverse professional experience to the table. His journey spans across various industries, including UX design, agile project management, sales, customer relations, and performing arts. Dennis's leadership is characterized by a deep commitment to innovation, user-centered design, and fostering a collaborative team environment. His passion for excellence drives Atmos Design Studio's mission to deliver top-tier digital experiences.</p>
+                <br>
+                <h3>Write Us a Message Today</h3>
+                <form id="contactForm" method="POST" action="/send-application">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder="First and Last Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="jobTitle" name="jobTitle" required placeholder="Job Title">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" required placeholder="Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="reason">Reason for Contact</label>
+                        <select id="reason" name="reason" required>
+                            <option value="" disabled selected>Choose from</option>
+                            <option value="project">Project Inquiry</option>
+                            <option value="services">Services Inquiry</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" required placeholder="Write Us a Message"></textarea>
+                    </div>
+                    <button class="cta-button" type="submit">Send Message</button>
+                </form>
+            </div>
+            <div class="popup-section">
+                <h3>Company Location</h3>
+                <div class="profile-text">
+                    <p><strong>Address:</strong> Forskningsringen 94, 174 61 Sundbyberg</p>
+                    <p><strong>City:</strong> Stockholm, Sweden</p>
+                    <p><strong>Phone:</strong> +46 (0) 709 45 54 59</p>
+                    <p><strong>Email:</strong> <span class="email">info@atmosdesignstudio.com</span>
+                        <img src="pictures/copy.png" alt="Copy Email" class="email-icon copy-icon" style="width: 20px; height: 20px;" onclick="copyToClipboard('info@atmosdesignstudio.com')">
+                        <a href="mailto:info@atmosdesignstudio.com">
+                            <img src="pictures/mail.png" alt="Mail" class="email-icon mail-icon" style="width: 20px; height: 20px;">
+                        </a>
+                    </p>
+                </div>
+                <div class="social-media-icons">
+                    <a href="https://twitter.com/yourprofile" target="_blank">
+                        <img src="pictures/twitter.png" alt="Twitter" class="social-icon">
+                    </a>
+                    <a href="https://facebook.com/yourprofile" target="_blank">
+                        <img src="pictures/facebook.png" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="https://instagram.com/yourprofile" target="_blank">
+                        <img src="pictures/instagram.png" alt="Instagram" class="social-icon">
+                    </a>
+                    <a href="https://youtube.com/yourprofile" target="_blank">
+                        <img src="pictures/youtube.png" alt="YouTube" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Popup for About Us / Learn More -->
+<div id="aboutUsPopup" class="popup">
+    <div class="popup-content">
+        <div class="popup-header">
+            <button id="contactBtn" class="cta-button book-meeting">Contact</button>
+            <h2>About Us</h2>
+            <span class="close">&times;</span>
+        </div>
+        <div class="popup-body">
+            <h3>Meet the Team</h3>
+            <!-- Team Section -->
+            <div class="team-container">
+                <div class="team-member">
+                    <img src="pictures/ludvig.png" alt="Team Member 1">
+                    <p><strong>Ludvig Hedin</strong></p>
+                    <p>UX & UI Designer</p>
+                    <p>Ludvig is a detail-oriented designer who brings fresh and innovative ideas to the table. His work is characterized by a strong user-centered approach, ensuring that every design resonates with the intended audience. With a deep passion for learning and growth, Ludvig is always exploring new design trends and methodologies to enhance his skill set.</p>
+                    <p>
+                        <a href="https://ludvighedin.se/" target="_blank">Portfolio</a> |
+                        <a href="https://www.linkedin.com/in/ludvig-hedin-058bba194" target="_blank">LinkedIn</a> |
+                        <a href="mailto:ludvighedin15@gmail.com" target="_blank">Email</a>
+                    </p>
+                </div>
+                <div class="team-member">
+                    <img src="pictures/lilo.png" alt="Team Member 2">
+                    <p><strong>Lilo</strong></p>
+                    <p>UX & UI Designer</p>
+                    <p>Lilo combines her creative flair with a deep understanding of user needs, developed from her background in the service industry. Her designs are not only visually appealing but also empathetic, catering to the nuances of user experience. Lilo's commitment to personal and artistic development makes her a key contributor to our team.</p>
+                    <p>
+                        <a href="https://www.figma.com/proto/hXsy80kEtY8yOdz3EFH16M/Portfolio?node-id=3-2&t=4STB49AyX1aC3SiH-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A2&show-proto-sidebar=1" target="_blank">Portfolio</a> |
+                        <a href="https://www.linkedin.com/in/lilo-vincent-5a6b23294/" target="_blank">LinkedIn</a> |
+                        <a href="mailto:lilo@tigrat.com" target="_blank">Email</a>
+                    </p>
+                </div>
+                <div class="team-member">
+                    <img src="pictures/profil2.png" alt="Team Member 3">
+                    <p><strong>Dennis Lantz</strong></p>
+                    <p>Agile Project Manager & UX Designer</p>
+                    <p>With over 15 years of experience across multiple industries, Dennis brings a wealth of knowledge to Atmos Design Studio. His expertise in agile methodologies and UX design ensures that every project is managed with precision and creativity. Dennis is not only a leader but a mentor, guiding the team to achieve excellence in every aspect of our work.</p>
+                    <p>
+                        <a href="https://www.atmosfaren.com" target="_blank">Portfolio</a> |
+                        <a href="https://www.linkedin.com/in/atmosfaren/" target="_blank">LinkedIn</a> |
+                        <a href="mailto:dennislantz@hotmail.com" target="_blank">Email</a>
+                    </p>
+                </div>
+            </div>
+            <div class="popup-section">
+                <h3>Our Journey</h3>
+                <p>We came together in 2023 during our studies at Changemaker Educations, united by a shared passion for design and innovation. Since then, we have collaborated on several impactful projects, consistently delivering outstanding results. Our journey is marked by a commitment to pushing the boundaries of design and creating meaningful user experiences.</p>
+            </div>
+
+            <div class="popup-section">
+                <h3>Our Culture</h3>
+                <p>Atmos Design Studio thrives on a culture of respect, creativity, and continuous learning. We believe in the power of collaboration and the importance of each team member's unique contributions. Our culture fosters an environment where innovation flourishes, and where we work closely together to achieve our common goals.</p>
+            </div>
+
+            <div class="popup-section">
+                <h3>Our Services</h3>
+                <h4>UX/UI Design</h4>
+                <p>We create intuitive, user-friendly designs that meet the unique needs of both our clients and their users. Our process is thorough and user-centered, ensuring that every design we produce is not only beautiful but also functional.</p>
+
+                <h4>Agile Project Management</h4>
+                <p>Our projects are managed using agile methodologies, providing flexibility and transparency throughout the design and development process. We ensure timely delivery while maintaining the highest standards of quality.</p>
+
+                <h4>User Research and Testing</h4>
+                <p>We believe that thorough research and testing are key to successful design. Our approach involves deep user understanding, from initial studies and concept development to detailed research and iterative testing, ensuring our designs effectively meet user needs.</p>
+                
+                <h4>Conceptualization for Startups</h4>
+                <p>We help startups bring their ideas to life by conceptualizing unique and effective product and service designs. Our team collaborates closely with you to ensure your vision is accurately translated into a design that resonates with your target audience and meets market demands.</p>
+
+                <h4>Business Development for Startups and Established Companies</h4>
+                <p>Whether you're launching a new business or looking to grow an established one, our business development services focus on aligning your design strategy with your business goals. We provide insights and strategies that drive growth, improve user engagement, and enhance your competitive edge.</p>
+
+                <h4>Rebranding with UX and UI Design</h4>
+                <p>In today's rapidly changing market, a strong brand identity is crucial. Our rebranding services leverage the power of UX and UI design to refresh and revitalize your brand. We work with you to create a cohesive and modern brand experience that reflects your company's values and resonates with your audience.</p>
+            </div>
+
+            <div class="popup-section">
+                <h3>Contact Us</h3>
+                <p>If you're looking for a team that combines creativity, expertise, and a dedication to excellence, Atmos Design Studio is your perfect partner. Let's collaborate to bring your vision to life with designs that are both innovative and impactful.</p>
+                <button id="contactBtn" class="cta-button book-meeting">Contact</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Popup for Career -->
+    <div id="careerPopup" class="popup">
+        <div class="popup-content">
+        <div class="popup-header">
+            <button id="contactBtn" class="cta-button book-meeting">Contact</button>
+            <h2>Join us</h2>
+            <span class="close">&times;</span>
+        </div>
+            <div class="popup-body">
+                <div class="popup-section">
+                    <h3>Collaborate with us</h3>
+                    <p>Are you passionate about design and innovation? Atmos Design Studio is looking for talented individuals to join our team. Explore our career opportunities and apply today.</p><br>
+                </div>
+                <div class="popup-section">
+                    <h3>What We Offer</h3>
+                    <h4>Collaborative Environment</h4>
+                    <p>Work alongside a team of dedicated professionals who are committed to delivering exceptional design solutions.</p><br>
+                    <h4>Growth Opportunities</h4>
+                    <p>We believe in continuous learning and development. Join us and grow your skills and career in a supportive environment.</p><br>
+                </div>
+                <div class="popup-section">
+                    <h3>Application Form</h3>
+                    <p>Ready to join our team? Complete the application form below and submit your resume. We look forward to hearing from you.</p>
+                    <form class="hiring-form" aria-labelledby="hiring-form-title" enctype="multipart/form-data" method="POST" action="/send-application">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required aria-required="true" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required aria-required="true" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" required aria-required="true" placeholder="Phone">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required aria-required="true" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <select id="how-did-you-find-us" name="how-did-you-find-us" required aria-required="true">
+                                <option value="" disabled selected>How did you find us?</option>
+                                <option value="google">Google</option>
+                                <option value="referral">Referral</option>
+                                <option value="social-media">Social Media</option>
+                                <option value="website">Website</option>
+                                <option value="advertisement">Advertisement</option>
+                                <option value="event">Event</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="resume">Attach Resume:</label>
+                            <input type="file" id="resume" name="resume" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="terms-checkbox">
+                                <input type="checkbox" id="terms-checkbox" required aria-required="true"> Agree to the <a href="documents/onboardingprotocol.pdf" target="_blank" id="terms-link">terms of employment</a>
+                            </label>
+                        </div>
+                        <button class="cta-button" type="submit">Send Application</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Popup for New Project -->
+<div id="newProjectPopup" class="popup">
+    <div class="popup-content">
+        <div class="popup-header">
+            <button id="contactBtnNewProject" class="cta-button book-meeting">Contact</button>
+            <h2>Case Study</h2>
+            <span class="close">&times;</span>
+        </div>
+        <div class="popup-body">
+            <div class="popup-section">
+                <h3>Abstract</h3>
+                <p>This case study explores the design and technological approach taken to deliver a user-centered, scalable, and secure digital solution. Emphasizing user engagement, this project combines cutting-edge technology with creative design to drive client success.</p>
+            </div>
+
+            <div class="popup-section">
+                <h3>Project Overview</h3>
+                <p>This project aims to deliver innovative solutions tailored to meet client needs through cutting-edge technology and creative design approaches. Our goal is to enhance user engagement and drive business success.</p>
+            </div>
+
+            <div class="popup-section">
+                <div class="content-wrapper right-align">
+                    <div class="text-content">
+                        <h4>Parking Time Sweden</h4>
+                        <p>"How can Parking Time encourage motorists to switch from traditional license plates to their digital alternative?"</p>
+                        <p>So what is a parking disc? Yes, that was a question we had to ask ourselves and why does it have so many challenges? A parking disc today is available handwritten, in paper form, plastic disk, a digital version and today in an application form in everyone's phones. So the question is how can we get the end users to use it in application? You will get answers to that in this project!</p>
+                    </div>
+                    <div class="image-content">
+                        <a href="pictures/scope.jpg" target="_blank">
+                            <img src="pictures/parkingtime.png" alt="Project Scope">
+                        </a>
+                        <p>UX-CASE with the productowner</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup-section">
+                <div class="content-wrapper left-align">
+                    <div class="image-content">
+                        <a href="pictures/background.jpg" target="_blank">
+                            <img src="pictures/parkingtime.png" alt="Parking Time Background">
+                        </a>
+                        <p>PARKING TIME PARKING SIGN</p>
+                    </div>
+                    <div class="text-content">
+                        <h4>Background</h4>
+                        <p>"Parking Time Sweden, a startup with promising opportunities, faces challenges in a competitive market as they revolutionize parking spaces. Despite just a few years of experience, their innovative idea of digitizing the analog parking disc is gaining traction. Presently, their app is rudimentary, operating at a basic level with a limited MVP. Our challenge emerged from this context."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup-section">
+                <div class="content-wrapper right-align">
+                    <div class="text-content">
+                        <h4>Scope</h4>
+                        <p>TOOLS: Figma, Microsoft, Google & Kanban</p>
+                        <p>TIMELINE: 3 weeks & 2 iterations</p>
+                        <p>TEAM: Productowner, UX Senior Supervisor & 4 UX Designers</p>
+                        <p>Agile Methods, Teamworker, Design Process & Prototyping</p>
+                    </div>
+                    <div class="image-content">
+                        <a href="pictures/scope.jpg" target="_blank">
+                            <img src="pictures/parkingtime.png" alt="Project Scope">
+                        </a>
+                        <p>UX-CASE with the productowner</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup-section">
+                <div class="content-wrapper left-align">
+                    <div class="image-content">
+                        <a href="pictures/problem.jpg" target="_blank">
+                            <img src="pictures/parkingtime.png" alt="The Problem">
+                        </a>
+                        <p>THE PROBLEM</p>
+                    </div>
+                    <div class="text-content">
+                        <h4>The Problem</h4>
+                        <p>"How can we help motorists use Parking Time when they have to park on a parking that needs a Parking disc?"</p>
+                        <p>The project aimed to improve the parking experience for users by offering a digital parking service that replaces the traditional p-disk. We conducted research to understand user needs and challenges and developed a prototype and marketing plan to launch Parking Time.</p>
+                        <p>We identified the need to simplify parking and increase accessibility for users by offering a digital solution. The research showed that the majority of users were open to trying an application instead of the physical p-disk.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup-section">
+                <div class="content-wrapper right-align">
+                    <div class="text-content">
+                        <h4>Research Insights</h4>
+                        <ul>
+                            <li>13/14 (93%) Uses paper disc</li>
+                            <li>9/14 (64%) Only knows about paper disc</li>
+                            <li>9/14 (64%) Prefer an app</li>
+                            <li>9/14 (64%) Looking for an app on the phone</li>
+                            <li>8/14 (57%) Checked for parking disc in the nearest store</li>
+                            <li>6/14 (43%) Writes a handwritten note</li>
+                            <li>5/14 (36%) Preferes a physical parking disc</li>
+                        </ul>
+                    </div>
+                    <div class="image-content">
+                        <a href="pictures/research.jpg" target="_blank">
+                            <img src="pictures/parkingtime.png" alt="Research Insights">
+                        </a>
+                        <p>Research Insights</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup-section">
+                <div class="content-wrapper left-align">
+                    <div class="image-content">
+                        <a href="pictures/findings.jpg" target="_blank">
+                            <img src="pictures/parkingtime.png" alt="Findings & Solutions">
+                        </a>
+                        <p>Research Findings & Solutions</p>
+                    </div>
+                    <div class="text-content">
+                        <h4>Research Findings & Solutions</h4>
+                        <p>User-Centric Design Solutions: By addressing specific pain points identified in user tests, such as simplifying the sign-in process, clarifying settings and icons, and improving the search function, the application becomes more intuitive and user-friendly.</p>
+                        <p>Insights from User Testing: Understanding user preferences, behaviors, and challenges through user testing allowed for targeted improvements. For instance, incorporating options for quick sign-in with Google or registration numbers addresses user preferences and streamlines the onboarding process.</p>
+                        <p>Implementation of Best Solutions: Incorporating features like bottom sheets for quick access, universal icons for intuitive understanding, and effective filters for parking zones improves the overall user experience. These solutions enhance accessibility, efficiency, and convenience for users navigating the application.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup-section">
+                <div class="content-wrapper right-align">
+                    <div class="text-content">
+                        <h4>Marketing Strategy Alignment</h4>
+                        <p>The marketing plan is aligned with the identified objectives and target audience insights. Tailoring marketing efforts to diverse target groups and locations, establishing strategic partnerships, and engaging directly with potential users through events ensures effective promotion and adoption of the application.</p>
+                        <p>Structured Implementation Process: Following a structured implementation process ensures efficiency and effectiveness in executing the marketing plan. From user testing to market launch, each step is strategically designed to maximize success and establish Parking Time as a prominent player in the parking app market.</p>
+                    </div>
+                    <div class="image-content">
+                        <a href="pictures/marketing.jpg" target="_blank">
+                            <img src="pictures/parkingtime.png" alt="Marketing Strategy">
+                        </a>
+                        <p>Marketing Strategy</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup-section">
+                <div class="content-wrapper left-align">
+                    <div class="image-content">
+                        <a href="pictures/design.jpg" target="_blank">
+                            <img src="pictures/parkingtime.png" alt="Design Thinking Process">
+                        </a>
+                        <p>Design Thinking Process</p>
+                    </div>
+                    <div class="text-content">
+                        <h4>Design Thinking Process</h4>
+                        <p>FORMAT: Double Diamond, Analyzing methods, Formative Interviews, Personas, The 10 Heuristics, Different Matrix's, S.W.O.T., Affinity Diagrams, User Testing, Flow charts, Brainstorming & Site Maps.</p>
+                        <p>SAMPLE SIZE: 14 Qualitative Interviews with people that uses parking discs and used open-ended questions for a deeper understanding. The users' ages were between 20-70 years old and lived around Sweden. They must have had used the parking disc at least once in some way.</p>
+                        <p>TESTS: 7 User testings on different individuals that use a car or any transport with parking disc. This was crucial for us to know early if our first prototype had issues or unclear patterns in the design.</p>
+                        <p>We did extensive research regarding parking discs & parking apps. We found only one competitor in a different region in Sweden. There is a huge market regarding this application and potential that we found within numerous big companies or states that use the parking disc.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup-section">
+                <div class="content-wrapper right-align">
+                    <div class="text-content">
+                        <h4>Key Insights</h4>
+                        <p>SIMPLE & USER FRIENDLY: One big insight we had was to get the user to reach their choices within the functions with as few button presses as possible. This was a huge challenge but also the most satisfying one to manage.</p>
+                        <p>KEY FEATURES: Early on, we noticed that the user wants to feel special, and the existing MVP had some problems but also missed the part of making the application more personal. The search function and the map became essential parts of the application.</p>
+                        <p>BETTER INTERFACE: One important thing that made us take a big step regarding the interface was that the app stood out with its lime green color, but it was not a user-friendly color. So we made a huge change in color, font, and white spaces for more inclusiveness.</p>
+                    </div>
+                    <div class="image-content">
+                        <a href="pictures/insights.jpg" target="_blank">
+                            <img src="pictures/parkingtime.png" alt="Key Insights">
+                        </a>
+                        <p>Key Insights</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup-section">
+                <div class="content-wrapper left-align">
+                    <div class="image-content">
+                        <a href="pictures/conclusions.jpg" target="_blank">
+                            <img src="pictures/parkingtime.png" alt="Conclusions">
+                        </a>
+                        <p>Conclusions</p>
+                    </div>
+                    <div class="text-content">
+                        <h4>Conclusions</h4>
+                        <p>BOTTOM SHEET & FEATURES: With easy sign-in alternatives, the user can quickly move forward to the start page. Added nearest parking space, favorites & a variety of notifications. Different language was a no-brainer that will be more inclusive. The bottom sheet feature helped us a lot in making the application more user-friendly and adding more features with very few keystrokes.</p>
+                        <p>MARKETING: For a small company, we noticed how important it is to have a secure model when implementing the application. We developed a secure strategic model that they can use when they find new partners or customers who want to use their application. Everything from slogans, starting points, marketing investments such as flyers or smaller sign material. What they can focus on in the beginning into the end cycle.</p>
+                        <p>AGILE WORKFLOW: The key measures to find solutions for a quality product that we found were working with agile principles that we strictly adhered to during the whole process. There was always time for iterations and going back and forth between different stages during the design process. Always having standups, retros, using Kanban, and making sure we are on the right path but, of course, helping each other when needed.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup-section">
+                <div class="content-wrapper right-align">
+                    <div class="text-content">
+                        <h4>Limitations</h4>
+                        <p>We reflected on the lessons learned from the project and identified key areas for improvement. This included the necessity for a more comprehensive breakdown of solutions and a deeper focus on certain aspects such as refining the onboarding process and incorporating additional features.</p>
+                        <p>The project was executed by a diverse cross-functional team comprising designers, project managers, marketers, and product owners. We employed agile methodologies along with UX research and analysis, utilizing techniques such as formative interviews, prototypes, and user testing to develop and validate our solutions.</p>
+                        <p>Upon reflection, we acknowledge certain regrets regarding our working approach. For instance, we realize that we disclosed individual information prematurely in the process. Additionally, we recognized belatedly that there were some group challenges that went unaddressed. During the presentation, we overlooked certain critical areas, such as onboarding, which prompted concerns from the product owner.</p>
+                    </div>
+                    <div class="image-content">
+                        <a href="pictures/limitations.jpg" target="_blank">
+                            <img src="pictures/parkingtime.png" alt="Limitations">
+                        </a>
+                        <p>Limitations</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup-section">
+                <div class="content-wrapper left-align">
+                    <div class="text-content">
+                        <h4>Personal Take</h4>
+                        <p>Reflecting on the project, there are a few areas where I believe we could have improved:</p>
+                        <ul>
+                            <li>Ensuring clearer anchoring within the solutions presented during the project's presentation.</li>
+                            <li>Working towards creating a clearer picture of certain solutions to enhance understanding.</li>
+                            <li>Avoiding premature division of work to allow for more flexibility and collaboration.</li>
+                            <li>Requesting further iterations to refine and enhance our solutions.</li>
+                        </ul>
+                        <p>In summary, through comprehensive research, prototyping, and testing, we successfully developed a user-centric digital parking service. However, future efforts will concentrate on enhancing the user experience and increasing awareness of Parking Time in the market.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Popup for Projects In Progress -->
+<div id="in-progress-popup" class="popup">
+    <div class="popup-content">
+        <div class="popup-header">
+            <h2>Project In Progress</h2>
+            <span class="close">&times;</span>
+        </div>
+        <div class="popup-body">
+            <p>This project is soon being posted, we are working on it!</p>
+            <div class="loading-container">
+                <img src="pictures/loading.gif" alt="Loading...">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Cookie Consent Popup and Overlay -->
+    <div id="cookie-consent-overlay" class="overlay"></div>
+    <div id="cookie-consent-popup" class="cookie-consent-popup">
+        <h2>Want some cookies?</h2>
+        <p>We use cookies to ensure that we give you the best experience on our website. By continuing to use our site, you accept our use of cookies. Read our <a href="documents/cookie_policy.pdf" target="_blank">Cookie Policy</a> for more information.</p>
+        <div class="cookie-buttons">
+            <button id="accept-cookies" class="cookie-button">Accept</button>
+            <button id="reject-cookies" class="cookie-button">Reject</button>
+        </div>
+    </div>
+
+    <button id="scrollToTopBtn" title="Go to top">&#8679;</button>
+    <script src="scripts.js"></script>
+</body>
+</html>
