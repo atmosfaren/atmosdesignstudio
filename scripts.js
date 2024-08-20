@@ -601,67 +601,52 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Function for handling the hiring forms
-    function initHiringForms() {
-        const hiringForms = document.querySelectorAll('.hiring-form');
-        hiringForms.forEach(form => {
-            form.addEventListener('submit', function (event) {
-                event.preventDefault();
-
-                const formData = {
-                    name: form.querySelector('input[name="name"]').value,
-                    email: form.querySelector('input[name="email"]').value,
-                    phone: form.querySelector('input[name="phone"]').value,
-                    subject: form.querySelector('input[name="subject"]').value,
-                    message: form.querySelector('textarea[name="message"]').value,
-                    howDidYouFindUs: form.querySelector('select[name="how-did-you-find-us"]').value,
-                    resume: form.querySelector('input[name="resume"]').files[0] // Attach the resume file
-                };
-
-                // Försök att skicka formData till EmailJS
-                emailjs.send('A-CuGtiiFvvuNPmEc', 'template_uzw80s6', formData)
-                    .then(function(response) {
-                        console.log('SUCCESS!', response.status, response.text);
-                        alert('Application submitted successfully!');
-                        form.reset();
-                    })
-                    .catch(function(error) {
-                        console.error('FAILED...', error);
-                        alert('Error submitting application. Please try again later.');
-                    });
-            });
-        });
-    }
-
-    // Function for handling the contact form (om du använder denna funktion)
-    function initContactForm() {
-        const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', function (event) {
+function initHiringForms() {
+    const hiringForms = document.querySelectorAll('.hiring-form');
+    hiringForms.forEach(form => {
+        form.addEventListener('submit', function (event) {
             event.preventDefault();
 
-            const formData = {
-                name: contactForm.querySelector('input[name="name"]').value,
-                jobTitle: contactForm.querySelector('input[name="jobTitle"]').value,
-                email: contactForm.querySelector('input[name="email"]').value,
-                phone: contactForm.querySelector('input[name="phone"]').value,
-                reason: contactForm.querySelector('select[name="reason"]').value,
-                message: contactForm.querySelector('textarea[name="message"]').value
-            };
+            const formData = new FormData(form);
 
-            emailjs.send('A-CuGtiiFvvuNPmEc', 'template_uzw80s6', formData)
+            // Försök att skicka formData till EmailJS
+            emailjs.sendForm('A-CuGtiiFvvuNPmEc', 'template_uzw80s6', form)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
-                    alert('Message sent successfully!');
-                    contactForm.reset();
-                    document.getElementById('contactPopup').style.display = 'none';
-                    document.getElementById('main-content').classList.remove('blur');
+                    alert('Application submitted successfully!');
+                    form.reset();
                 })
                 .catch(function(error) {
                     console.error('FAILED...', error);
-                    alert('Error sending message. Please try again later.');
+                    alert('Error submitting application. Please try again later.');
                 });
         });
-    }
-});
+    });
+}
+
+// Function for handling the contact form (om du använder denna funktion)
+function initContactForm() {
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(contactForm);
+
+        emailjs.sendForm('A-CuGtiiFvvuNPmEc', 'template_uzw80s6', contactForm)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Message sent successfully!');
+                contactForm.reset();
+                document.getElementById('contactPopup').style.display = 'none';
+                document.getElementById('main-content').classList.remove('blur');
+            })
+            .catch(function(error) {
+                console.error('FAILED...', error);
+                alert('Error sending message. Please try again later.');
+            });
+    });
+}
+
 
 // Funktion för profil scroll bilder TOOLS
 document.addEventListener('DOMContentLoaded', function () {
