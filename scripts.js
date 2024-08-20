@@ -16,11 +16,10 @@ document.addEventListener('DOMContentLoaded', function () {
     initScrollToTopButton();
     initClientReviewsScroll();
     initCookieConsent();
-    initContactForm();  // For the contact form
-    initHiringForms();  // For the two hiring forms
+    initContactForm();
     initTermsCheckbox();
-    initNewProjectPopup();
-    initProfileScrollImages(); // För profil scroll bilder
+    initNewProjectPopup(); 
+
 
     // Funktion för att hantera att användaren måste läsa villkoren innan de kan bocka av rutan
     function initTermsCheckbox() {
@@ -598,83 +597,65 @@ document.addEventListener('DOMContentLoaded', function () {
     handleScroll();
 });
 
-// Funktionen initHiringForms
-    function initHiringForms() {
-        const hiringForms = document.querySelectorAll('.hiring-form');
-        hiringForms.forEach(form => {
-            form.addEventListener('submit', function (event) {
-                event.preventDefault();
 
-                // Skicka formuläret till EmailJS
-                emailjs.sendForm('service_4kzq9ek', 'template_n7nphxj', form)
-                    .then(function(response) {
-                        console.log('SUCCESS!', response.status, response.text);
-                        alert('Application submitted successfully!');
-                        form.reset();
-                    })
-                    .catch(function(error) {
-                        console.error('FAILED...', error);
-                        alert('Error submitting application. Please try again later.');
-                    });
-            });
+// Funktion för kontaktformulär
+function initContactForm() {
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(contactForm);
+
+        fetch(contactForm.action, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('Message sent successfully!');
+                contactForm.reset();
+                document.getElementById('contactPopup').style.display = 'none';
+                document.getElementById('main-content').classList.remove('blur');
+            } else {
+                alert('Error sending message. Please try again later.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error sending message. Please try again later.');
         });
-    }
-
-    // Funktionen initContactForm
-    function initContactForm() {
-        const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            // Skicka formuläret till EmailJS
-            emailjs.sendForm('service_4kzq9ek', 'template_n7nphxj', contactForm)
-                .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    alert('Message sent successfully!');
-                    contactForm.reset();
-                    document.getElementById('contactPopup').style.display = 'none';
-                    document.getElementById('main-content').classList.remove('blur');
-                })
-                .catch(function(error) {
-                    console.error('FAILED...', error);
-                    alert('Error sending message. Please try again later.');
-                });
-        });
-    }
+    });
+}
 
 // Funktion för profil scroll bilder TOOLS
-    function initProfileScrollImages() {
-        const scrollContainer = document.querySelector('#tools-scroll .scroll-content');
-        const scrollWrapper = document.querySelector('#tools-scroll');
-        let scrollSpeed = 0.5; // Standard scrollhastighet
-        let slowSpeed = 0.1; // Hastighet vid hover
-        let isHovering = false;
+document.addEventListener('DOMContentLoaded', function () {
+    const scrollContainer = document.querySelector('#tools-scroll .scroll-content');
+    const scrollWrapper = document.querySelector('#tools-scroll');
+    let scrollSpeed = 0.5; // Standard scrollhastighet
+    let slowSpeed = 0.1; // Hastighet vid hover
+    let isHovering = false;
 
-        function startScrolling() {
-            scrollContainer.style.transition = 'none'; // Ta bort tidigare transition
-            let scrollLeft = scrollWrapper.scrollLeft;
-            scrollLeft += isHovering ? slowSpeed : scrollSpeed;
-            if (scrollLeft >= scrollContainer.scrollWidth / 2) {
-                scrollWrapper.scrollLeft = 0; // Återställ scroll-positionen för en loopande effekt
-            } else {
-                scrollWrapper.scrollLeft = scrollLeft;
-            }
-            requestAnimationFrame(startScrolling);
+    function startScrolling() {
+        scrollContainer.style.transition = 'none'; // Ta bort tidigare transition
+        let scrollLeft = scrollWrapper.scrollLeft;
+        scrollLeft += isHovering ? slowSpeed : scrollSpeed;
+        if (scrollLeft >= scrollContainer.scrollWidth / 2) {
+            scrollWrapper.scrollLeft = 0; // Återställ scroll-positionen för en loopande effekt
+        } else {
+            scrollWrapper.scrollLeft = scrollLeft;
         }
-
-        scrollContainer.addEventListener('mouseover', function () {
-            isHovering = true;
-        });
-
-        scrollContainer.addEventListener('mouseout', function () {
-            isHovering = false;
-        });
-
-        startScrolling();
+        requestAnimationFrame(startScrolling);
     }
 
-    // Funktionen initTermsCheckbox, initNavbar, initBurgerMenu, etc.
-    // Dessa funktioner fortsätter här, så som de var i din tidigare kod.
+    scrollContainer.addEventListener('mouseover', function () {
+        isHovering = true;
+    });
+
+    scrollContainer.addEventListener('mouseout', function () {
+        isHovering = false;
+    });
+
+    startScrolling();
 });
 
 // Funktion för profil scroll bilder
