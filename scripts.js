@@ -596,6 +596,7 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', handleScroll);
     handleScroll();
 });
+
 // Function for handling the hiring forms
 function initHiringForms() {
     const hiringForms = document.querySelectorAll('.hiring-form');
@@ -612,7 +613,7 @@ function initHiringForms() {
                 howDidYouFindUs: form.querySelector('select[name="how-did-you-find-us"]').value
             };
 
-            emailjs.send('A-CuGtiiFvvuNPmEc', 'atmosdesignstudio', formData)
+            emailjs.send('atmosdesignstudio', 'atmosdesignstudio', formData)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     alert('Application submitted successfully!');
@@ -641,7 +642,7 @@ function initContactForm() {
             message: contactForm.querySelector('textarea[name="message"]').value
         };
 
-        emailjs.send('A-CuGtiiFvvuNPmEc', 'atmosdesignstudio', formData)
+        emailjs.send('atmosdesignstudio', 'atmosdesignstudio', formData)
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 alert('Message sent successfully!');
@@ -655,7 +656,6 @@ function initContactForm() {
             });
     });
 }
-
 
 // Funktion för profil scroll bilder TOOLS
 document.addEventListener('DOMContentLoaded', function () {
