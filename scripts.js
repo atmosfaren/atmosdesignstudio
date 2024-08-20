@@ -613,7 +613,7 @@ function initHiringForms() {
                 howDidYouFindUs: form.querySelector('select[name="how-did-you-find-us"]').value
             };
 
-            emailjs.send('A-CuGtiiFvvuNPmEc', 'atmosdesignstudio', formData)
+            emailjs.send('service_dbbqzuc', 'atmosdesignstudio', formData)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     alert('Application submitted successfully!');
@@ -642,7 +642,7 @@ function initContactForm() {
             message: contactForm.querySelector('textarea[name="message"]').value
         };
 
-        emailjs.send('A-CuGtiiFvvuNPmEc', 'atmosdesignstudio', formData)
+        emailjs.send('service_dbbqzuc', 'atmosdesignstudio', formData)
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 alert('Message sent successfully!');
