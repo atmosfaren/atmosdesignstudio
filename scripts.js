@@ -317,16 +317,21 @@ function initFormSubmission() {
     document.querySelector('.hiring-form').addEventListener('submit', function(event) {
         event.preventDefault();
 
-        emailjs.sendForm('service_4kzq9ek', 'template_65r56kv', this)
-        .then(function(response) {
-            alert('Application sent successfully!');
-            document.querySelector('.hiring-form').reset();
-        }, function(error) {
-            console.error('Failed to send application:', error);
-            alert('Failed to send application. Please try again later.');
-        });
+    emailjs.sendForm('service_4kzq9ek', 'template_65r56kv', contactForm)
+    .then(function(response) {
+        alert('Message sent successfully!');
+        contactForm.reset();
+        document.getElementById('contactPopup').style.display = 'none';
+        const mainContent = document.getElementById('main-content');
+        if (mainContent) {
+            mainContent.classList.remove('blur');
+        } else {
+            console.error('main-content element not found');
+        }
+    }, function(error) {
+        console.error('Failed to send message:', error);
+        alert('Failed to send message. Please try again later.');
     });
-}
 
 // Funktion för att toggla FAQ
 function initFAQToggle() {
